@@ -13,7 +13,7 @@ RUN rm /usr/local/tomcat/lib/tomcat-websocket.jar
 # Copy config, database connector library and script for environment variables into container
 COPY baseContext.xml /usr/local/tomcat/conf/context.xml
 COPY mysql-connector-java-5.1.44-bin.jar /usr/local/tomcat/lib/mysql-connector-java-5.1.44-bin.jar
-COPY target/jars/dockermemoryconfigurator* /usr/local/tomcat/bin/dockermemoryconfigurator.jar
+COPY dockermemoryconfigurator* /usr/local/tomcat/bin/dockermemoryconfigurator.jar
 RUN rm /usr/local/tomcat/conf/server.xml
 COPY server.xml /usr/local/tomcat/conf/
 
